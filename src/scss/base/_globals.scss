@@ -1,0 +1,29 @@
+@use 'variables' as v;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: v.$Cream;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: v.$font1;
+}
+
+p {
+    font-family: v.$font2;
+    font-size: 14px;
+    line-height: 1.5rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+

@@ -1,0 +1,68 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.card {
+    max-width: 600px;
+    background-color: v.$White;
+    border-radius: 12px;
+
+    @include m.tablet {
+        @include m.grid(2,0);
+    }
+
+}
+
+.card__img {
+    background-image: url(../img/image-product-mobile.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 20rem;
+    border-radius: 12px 12px 0 0;
+
+    @include m.tablet{
+        background-image: url(../img/image-product-desktop.webp);
+        height: 100%;
+        border-radius: 12px 0 0 12px;
+    }
+
+}
+
+.card__info {
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+    padding: 2rem;
+
+    .card__subtitle {
+        text-transform: uppercase;
+        letter-spacing: .4rem;
+    }
+
+    .card__title {
+        font-size: 30px;
+        color: v.$Very-dark-blue;
+    }
+
+    p {
+        color: v.$Dark-grayish-blue;
+    }
+
+}
+
+.card__price {
+    margin: 1rem 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+
+    .card__price--retail {
+        font-family: v.$font1;
+        font-size: 30px;
+        color: v.$Dark-cyan;
+    }
+
+    .card__price--discount {
+        text-decoration: line-through;
+    }
+}

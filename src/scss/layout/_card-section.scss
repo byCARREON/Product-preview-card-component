@@ -1,0 +1,17 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.card-section {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    @include m.tablet {
+        height: 90vh;
+    }
+
+    @include m.phone {
+        margin-top: 2rem;
+    }
+}
